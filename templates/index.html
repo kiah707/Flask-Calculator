@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>
+        simple arithmetic calculator
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </title>
+</head>
+<body>
+    <h1>Simple Arithmetic Calculator</h1>
+    <form method="post">
+        <input type="number" name="x" placeholder="Enter 1st number" required>
+        <input type="number" name="y" placeholder="Enter 2nd number" required>
+        <select name="operation" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="**">^</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+    {%if result is not none %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
